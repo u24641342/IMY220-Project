@@ -1,0 +1,126 @@
+.home-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 200px;
+    padding: 24px 32px 0 32px;
+    position: relative;
+}
+
+.search-hello {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #0B5351;
+    font-size: 18px;
+    outline: none;
+    margin-right: 24px;
+    background: #f7f7f7;
+    color: #092327;
+}
+
+.hello-msg {
+    font-size: 22px;
+    color: #D9D9D9;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.top-logo {
+    position: absolute;
+    right: 32px;
+    top: 24px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.divider {
+    margin-left: 200px;
+    height: 0;
+    border-top: 3px solid;
+    width: calc(100% - 200px);
+}
+
+.navbar-divider {
+    border-color: #0B5351;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.white-divider {
+    border-color: #fff;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.home-container {
+    padding: 32px;
+    margin-left: 200px;
+    margin-top: 16px;
+    background-color: #ffffff30;
+    min-height: 100vh;
+    border-radius: 15px;
+}
+
+.feed-box {
+    background: #f2f7fa;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(11,83,81,0.08);
+    padding: 24px 32px;
+    margin-bottom: 15px;
+}
+
+.feed-box h2 {
+    margin-top: 0;
+    color: #0B5351;
+    font-family: "Inter", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.feed-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0 0;
+}
+
+.feed-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #092327;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+}
+
+.feed-list li:last-child {
+    border-bottom: none;
+}
+
+.feed-switch {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.switch-btn {
+    padding: 8px 24px;
+    border-radius: 20px;
+    border: none;
+    background: #e0e0e0;
+    color: #092327;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.switch-btn.active {
+    background: #0B5351;
+    color: #fff;
+}

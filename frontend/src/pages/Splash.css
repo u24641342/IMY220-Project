@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Inter";
+    src: url('/frontend/public/assets/fonts/Inter-VariableFont_opsz\,wght.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "Karla";
+    src: url('/frontend/public/assets/fonts/Karla-VariableFont_wght.ttf') format("truetype");
+}
+
+#wordbox {
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+    color: #ffffff;
+    top: 20px;
+}
+
+#logospot {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+#signup-button {
+    background: #092327;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #00A9A5;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    height: 30px;
+    text-decoration: none;
+}
+
+#login-button {
+    background: #092327;
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #00A9A5;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    height: 30px;
+    text-decoration: none;
+}
+
+.animated-line {
+height: 6px;
+width: 700px;
+background: white;
+border-radius: 3px;
+margin: 0 auto;
+position: relative;
+top: -10px;
+animation: lineAnimation 3s ease-in-out;
+}
+
+@keyframes lineAnimation {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
