@@ -26,6 +26,11 @@ app.post("/api/signin", function (req, res) {
     }
   });
 });
+app.use(function (req, res) {
+  res.sendFile("index.html", {
+    root: "frontend/public"
+  });
+});
 app.listen(3000, function () {
   console.log("Listening on localhost:3000");
 });

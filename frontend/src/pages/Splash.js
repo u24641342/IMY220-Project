@@ -4,7 +4,7 @@ import "./Splash.css";
 
 function Splash() {
   React.useEffect(() => {
-    document.body.style.backgroundImage = "url('/assets/images/night sky.jpg')";
+    document.body.style.backgroundImage = "url('/assets/images/nightsky.jpg')";
     document.body.style.backgroundSize = "cover";
   }, []);
     return (

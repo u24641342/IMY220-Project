@@ -1,6 +1,8 @@
 import Navbar from '../components/Navbar';
 import ProjectFilesBox from '../components/ProjectFilesBox';
+import CommentsBox from '../components/CommentsBox';
 import React, { useState } from 'react';
+import CheckinComments from '../components/CheckinComments';
 import './Project.css';
 
 function Project() {
@@ -12,7 +14,6 @@ function Project() {
             document.body.style.backgroundColor = '';
         };
         }, []);
-
 
 	const project = {
 		name: 'Project Uno',
@@ -26,6 +27,13 @@ function Project() {
 		collaborators: ['EpicUser#2956', 'diffieDiff#8644', 'michaelsRISEUP#80085'],
 		languages: ['JavaBlight', 'SCC', 'LMTH']
 	};
+
+	const comments = [
+		"This is a comment about the project g",
+		"This is another comment about the project.",
+        "I don't understand the 'friends' part of the profile page.",
+        "Why would a version control website have a 'friends' feature?"
+	];
 
 
 	const [showFullDesc, setShowFullDesc] = useState(false);
@@ -46,6 +54,7 @@ function Project() {
                         <button className="project-action-btn">Edit Files</button>
                         <button className="project-action-btn">Edit Permissions</button>
                     </div>
+                    <CheckinComments />
 					<div className="project-stats-row">
 						<div className="project-stat">
 							<div className="divider white-divider" />
@@ -93,12 +102,14 @@ function Project() {
 								))}
 							</ul>
 						</div>
+						<CommentsBox comments={comments} />
 					</div>
 				</div>
 			</div>
 		</div>
         </>
 	);
-}
 
+
+}
 export default Project;
