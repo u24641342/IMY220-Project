@@ -1,17 +1,20 @@
 {
-  "name": "45-neto-d1",
+  "name": "45-neto-d2",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "webpack && babel backend/server.js -d dist",
+    "build": "webpack && babel backend -d dist",
     "start": "npm run build && node dist/server.js",
-    "watch": "webpack -w"
+    "watch": "webpack -w",
+    "dev": "node backend/server.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
+    "mongodb": "^6.20.0",
     "path": "^0.12.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

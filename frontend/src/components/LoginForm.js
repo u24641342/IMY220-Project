@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../pages/SignUp.css';
+import ApiService, { AuthService } from '../services/api';
 
 function LoginForm() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [errors, setErrors] = React.useState({});
+  const [isLoading, setIsLoading] = React.useState(false);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     const newErrors = {};
@@ -32,27 +35,24 @@ function LoginForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (isValid) {
+    if (isValid && !isLoading)
+    {
+      setIsLoading(true);
       try {
-        const res = await fetch("/api/signin", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, password })
-        });
-        const data = await res.json();
-        if (data.success) 
+        const response = await ApiService.signIn({ email, password });
+        
+        if (response.success)
         {
-          localStorage.setItem("token", data.token);
-          alert(data.message);
-        } 
-        else 
-        {
-          alert("Login failed.");
+          // Store authentication data
+          AuthService.setToken(response.token);
+          AuthService.setUser(response.user);
+          alert(response.message);
+          navigate('/home');
         }
-      } 
-      catch (err) 
-      {
-        alert("Error connecting to server.");
+      } catch (error) {
+        alert(`Login failed: ${error.message}`);
+      } finally {
+        setIsLoading(false);
       }
     }
   };
@@ -84,7 +84,9 @@ function LoginForm() {
         required
         minLength={6}
       />
-      <button type="submit" id="signup" disabled={!isValid}>Get to work.</button>
+      <button type="submit" id="signup" disabled={!isValid || isLoading}>
+        {isLoading ? 'Signing In...' : 'Get to work.'}
+      </button>
       {!isValid && (
         <div className='signup-rules-list' style={{color: 'red'}}>
           Please fix the errors above to enable login.

@@ -1,0 +1,108 @@
+/* Feed Component Styles */
+.feed-box {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff3a;
+}
+
+.feed-box h2 {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.feed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feed-list li {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #1a3a3e;
+  border: 1px solid #2a4a4e;
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+/* Friend Requests Section */
+.friend-requests-section {
+  margin-bottom: 20px;
+}
+
+.friend-requests-title {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.friend-request-item {
+  background-color: #1a3a3e;
+  border: 1px solid #2a4a4e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.friend-request-info {
+  display: flex;
+  align-items: center;
+}
+
+.friend-request-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.friend-request-text {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+.friend-request-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-accept {
+  font-family: 'Inter', sans-serif;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.btn-accept:hover {
+  background-color: #45a049;
+}
+
+.btn-reject {
+  font-family: 'Inter', sans-serif;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.btn-reject:hover {
+  background-color: #da190b;
+}

@@ -202,19 +202,39 @@
 	gap: 32px;
 	margin-top: 24px;
 }
-.collaborators-box, .languages-box {
+.collaborators-box, .languages-box, .project-info-box {
 	background: #00A9A525;
 	border-radius: 16px;
 	box-shadow: 0 2px 8px rgba(11,83,81,0.08);
 	padding: 24px 32px;
 	min-width: 220px;
 }
-.collaborators-box h3, .languages-box h3 {
+.collaborators-box h3, .languages-box h3, .project-info-box h3 {
 	margin-top: 0;
 	color: #ffffff;
 	font-family: "Inter", sans-serif;
 	font-size: 18px;
 	font-weight: 700;
+}
+
+/* Project Info Box Content Styles */
+.project-info-box .project-info-text {
+	font-family: "Inter", sans-serif;
+}
+
+.project-info-box .project-info-text > div {
+	margin-bottom: 8px;
+	color: #ccc;
+	font-family: "Inter", sans-serif;
+}
+
+.project-info-box .project-info-value {
+	color: #fff;
+	font-family: "Inter", sans-serif;
+}
+
+.project-info-box .project-info-status {
+	font-family: "Inter", sans-serif;
 }
 .collaborators-box ul, .languages-box ul {
 	list-style: none;
@@ -230,4 +250,569 @@
 }
 .collaborators-box li:last-child, .languages-box li:last-child {
 	border-bottom: none;
+}
+
+/* File Management Styles */
+.file-management-section {
+	margin-bottom: 20px;
+}
+
+.file-section-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.file-section-title {
+	color: #fff;
+	font-family: "Inter", sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.file-list-container {
+	background-color: #1a3a3e;
+	padding: 15px;
+	border-radius: 8px;
+	border: 1px solid #2a4a4e;
+}
+
+.file-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 0;
+	border-bottom: 1px solid #2a4a4e;
+}
+
+.file-info {
+	color: #fff;
+	font-family: "Inter", sans-serif;
+}
+
+.file-name {
+	font-size: 14px;
+	margin-bottom: 2px;
+}
+
+.file-meta {
+	color: #ccc;
+	font-size: 12px;
+}
+
+.file-actions {
+	display: flex;
+	gap: 5px;
+}
+
+.no-files {
+	color: #ccc;
+	text-align: center;
+	padding: 20px;
+	font-family: "Inter", sans-serif;
+}
+
+/* Check-in Styles */
+.checkin-section {
+	margin-top: 20px;
+}
+
+.checkin-section-title {
+	color: #fff;
+	margin-bottom: 15px;
+	font-family: "Inter", sans-serif;
+}
+
+.checkin-form {
+	background-color: #1a3a3e;
+	padding: 15px;
+	border-radius: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #2a4a4e;
+}
+
+.checkin-form-title {
+	color: #fff;
+	margin-bottom: 10px;
+	font-family: "Inter", sans-serif;
+}
+
+.checkin-textarea {
+	width: 100%;
+	min-height: 60px;
+	background-color: #0a2a2e;
+	color: #fff;
+	border: 1px solid #2a4a4e;
+	border-radius: 5px;
+	padding: 10px;
+	resize: vertical;
+	margin-bottom: 10px;
+	font-family: "Inter", sans-serif;
+	box-sizing: border-box;
+}
+
+.checkin-item {
+	background-color: #0a2a2e;
+	border: 1px solid #2a4a4e;
+	border-radius: 8px;
+	padding: 12px;
+	margin-bottom: 10px;
+}
+
+.checkin-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 8px;
+}
+
+.checkin-number {
+	color: #4CAF50;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: "Inter", sans-serif;
+}
+
+.checkin-date {
+	color: #aaa;
+	font-size: 12px;
+	font-family: "Inter", sans-serif;
+}
+
+.checkin-message {
+	color: #fff;
+	margin-bottom: 8px;
+	font-family: "Inter", sans-serif;
+}
+
+.checkin-comments {
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #2a4a4e;
+}
+
+.checkin-comment {
+	background-color: #1a3a3e;
+	padding: 8px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.comment-timestamp {
+	color: #aaa;
+	font-size: 11px;
+	margin-bottom: 3px;
+	font-family: "Inter", sans-serif;
+}
+
+.comment-message {
+	color: #fff;
+	font-size: 13px;
+	font-family: "Inter", sans-serif;
+}
+
+.no-checkins {
+	color: #aaa;
+	text-align: center;
+	padding: 20px;
+	background-color: #0a2a2e;
+	border-radius: 8px;
+	border: 1px solid #2a4a4e;
+	font-family: "Inter", sans-serif;
+}
+
+/* Team Member Styles */
+.team-member-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.team-member-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.member-name {
+	font-family: "Inter", sans-serif;
+}
+
+.owner-member {
+	font-weight: bold;
+	color: #4CAF50;
+}
+
+/* Button Styles */
+.btn-primary {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 12px;
+	font-family: "Inter", sans-serif;
+}
+
+.btn-secondary {
+	background-color: #2196F3;
+	color: white;
+	border: none;
+	padding: 4px 8px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 11px;
+	font-family: "Inter", sans-serif;
+}
+
+.btn-warning {
+	background-color: #FF9800;
+	color: white;
+	border: none;
+	padding: 4px 8px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 11px;
+	font-family: "Inter", sans-serif;
+}
+
+.btn-danger {
+	background-color: #f44336;
+	color: white;
+	border: none;
+	padding: 4px 8px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 11px;
+	font-family: "Inter", sans-serif;
+}
+
+.btn-danger-sm {
+	background-color: #f44336;
+	color: white;
+	border: none;
+	padding: 2px 6px;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 10px;
+	font-family: "Inter", sans-serif;
+}
+
+/* Modal Styles for Project Page */
+.project-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+.project-modal-content {
+	background-color: #1a3a3e;
+	padding: 20px;
+	border-radius: 8px;
+	border: 1px solid #2a4a4e;
+	min-width: 400px;
+}
+
+.project-modal-title {
+	color: #fff;
+	margin-bottom: 15px;
+	font-family: "Inter", sans-serif;
+}
+
+.project-modal-input {
+	width: 100%;
+	padding: 10px;
+	background-color: #0a2a2e;
+	color: #fff;
+	border: 1px solid #2a4a4e;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	font-family: "Inter", sans-serif;
+	box-sizing: border-box;
+}
+
+.project-modal-textarea {
+	width: 100%;
+	height: 400px;
+	background-color: #0a2a2e;
+	color: #fff;
+	border: 1px solid #2a4a4e;
+	border-radius: 5px;
+	padding: 10px;
+	font-family: monospace;
+	font-size: 14px;
+	resize: vertical;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+
+.project-modal-actions {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+}
+
+.project-modal-file-info {
+	color: #ccc;
+	font-size: 14px;
+	margin-bottom: 15px;
+	font-family: "Inter", sans-serif;
+}
+
+.project-modal-btn-cancel {
+	background-color: #666;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Inter", sans-serif;
+}
+
+.project-modal-btn-save {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Inter", sans-serif;
+}
+
+.project-modal-btn-save:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.project-modal-form-group {
+	margin-bottom: 20px;
+}
+
+.project-modal-label {
+	display: block;
+	color: #fff;
+	font-family: "Inter", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+.project-modal-form-group .project-modal-textarea {
+	margin-top: 0;
+}
+
+.project-modal-form-group small {
+	color: #aaa;
+	font-size: 11px;
+	font-family: "Inter", sans-serif;
+	margin-top: 5px;
+	display: block;
+}
+
+/* Project Status and Info Styles */
+.project-status-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.project-status-text {
+	color: #aaa;
+	font-size: 14px;
+	font-family: "Inter", sans-serif;
+}
+
+.project-status-value {
+	font-family: "Inter", sans-serif;
+}
+
+.status-active {
+	color: #4CAF50;
+}
+
+.status-inactive {
+	color: #f44336;
+}
+
+.project-info-text {
+	color: #ccc;
+	font-size: 14px;
+	font-family: "Inter", sans-serif;
+}
+
+.project-info-value {
+	color: #fff;
+	font-family: "Inter", sans-serif;
+}
+
+.project-info-status {
+	font-family: "Inter", sans-serif;
+}
+
+.project-members-empty {
+	color: #aaa;
+	font-family: "Inter", sans-serif;
+}
+
+.project-tags-empty {
+	color: #aaa;
+	font-family: "Inter", sans-serif;
+}
+
+/* Loading and Error States */
+.project-loading-container {
+	color: #fff;
+	text-align: center;
+	padding: 50px;
+	font-family: "Inter", sans-serif;
+}
+
+.project-error-container {
+	color: #fff;
+	text-align: center;
+	padding: 50px;
+	font-family: "Inter", sans-serif;
+}
+
+.project-back-button {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+	font-family: "Inter", sans-serif;
+}
+
+.project-back-button:hover {
+	background-color: #45a049;
+}
+
+/* Check-in Button States */
+.checkin-btn-active {
+	background-color: #4CAF50;
+	cursor: pointer;
+}
+
+.checkin-btn-disabled {
+	background-color: #666;
+	cursor: not-allowed;
+}
+
+/* Check-ins Container */
+.checkins-scroll-container {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+/* Modal Overlay and Content */
+.add-member-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+.add-member-modal-content {
+	background-color: #1a3a3e;
+	padding: 20px;
+	border-radius: 8px;
+	border: 1px solid #2a4a4e;
+	min-width: 400px;
+}
+
+.add-member-modal-title {
+	color: #fff;
+	margin-bottom: 15px;
+	font-family: "Inter", sans-serif;
+}
+
+.add-member-modal-input {
+	width: 100%;
+	padding: 10px;
+	background-color: #0a2a2e;
+	color: #fff;
+	border: 1px solid #2a4a4e;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	font-family: "Inter", sans-serif;
+}
+
+.add-member-modal-actions {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+}
+
+.add-member-btn-cancel {
+	background-color: #666;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Inter", sans-serif;
+}
+
+.add-member-btn-add {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Inter", sans-serif;
+}
+
+.add-member-btn-add:disabled {
+	opacity: 0.5;
+}
+
+/* File Upload Modal Specific Styles */
+.file-upload-modal-size-info {
+	color: #aaa;
+	font-size: 12px;
+	margin-bottom: 15px;
+	display: block;
+	font-family: "Inter", sans-serif;
+}
+
+.file-upload-modal-help-text {
+	color: #aaa;
+	font-size: 11px;
+	margin-top: 5px;
+	display: block;
+	font-family: "Inter", sans-serif;
+}
+
+/* File Edit Modal Specific Styles */
+.file-edit-modal-content {
+	min-width: 600px;
+	max-width: 80vw;
+	max-height: 80vh;
+}
+
+.file-edit-modal-help-text {
+	color: #aaa;
+	font-size: 11px;
+	margin-top: 5px;
+	display: block;
+	font-family: "Inter", sans-serif;
 }
